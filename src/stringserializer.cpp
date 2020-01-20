@@ -261,6 +261,7 @@ QString StringSerializer::toString(const QVariant &value) const
     auto type = static_cast<QMetaType::Type>(value.type());
     switch (type) {
     case QMetaType::Bool:
+        return value.toBool() ? "1" : "0";
     case QMetaType::Char:
     case QMetaType::Short:
     case QMetaType::UShort:
