@@ -251,6 +251,9 @@ QVariant StringSerializer::fromString(const QString &value, const QMetaType::Typ
         return f;
     }
 #endif
+    case QMetaType::User:
+        // user meta types should be foreign keys
+        return value.toLongLong();
     default:
         return QVariant();
     }
