@@ -1,7 +1,7 @@
 #ifndef SERIALIZER_H
 #define SERIALIZER_H
 
-#include <QVariant>
+#include <QtCore/QVariant>
 #include "serializer_global.h"
 
 class AbstractSerializer
@@ -18,6 +18,14 @@ private:
     virtual QString unescapeString(const QString &str) const;
     virtual QVariant fromString(const QString &value, const QMetaType::Type &type) const = 0;
     virtual QString toString(const QVariant &value) const = 0;
+};
+
+
+class AbstractSerializer2
+{
+protected:
+    void begin(const QString &data);
+    QVariant read(QMetaType::Type type);
 };
 
 #endif // SERIALIZER_H
