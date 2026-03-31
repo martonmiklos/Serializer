@@ -4,6 +4,7 @@
 #include <QtCore/QDataStream>
 #include <QtCore/QJsonDocument>
 #include <QtCore/QDebug>
+#include <QDebug>
 #include <QIODevice>
 
 QDataStream &operator<<(QDataStream &stream, const QJsonDocument &doc)

@@ -1,4 +1,5 @@
 #include "jsonserializer.h"
+#include "qimage.h"
 
 #include <QtCore/QDataStream>
 #include <QtCore/QDebug>
